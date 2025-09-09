@@ -4,7 +4,7 @@ export const Contact = () => {
   return (
     <div className="max-w-[80%] mx-auto bg-black sm:py-20 p-5" id="contact">
       <div className="text-center">
-        <h2 className="text-4xl font-bold leading-tight primary-color mb-4">
+        <h2 className="text-4xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600 inline-block mb-4">
           Contáctame
         </h2>
       </div>
@@ -48,7 +48,7 @@ export const Contact = () => {
                 <div className="sm:col-span-2">
                   <button
                     type="submit"
-                    className="text-xl w-full p-4 mt-2 font-semibold text-white bg-primary-color rounded-md"
+                    className="text-xl w-full p-4 mt-2 font-semibold text-white bg-gradient-to-r from-orange-400 to-pink-600 inline-block rounded-md"
                   >
                     Enviar
                   </button>

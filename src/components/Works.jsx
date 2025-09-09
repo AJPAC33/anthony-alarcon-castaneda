@@ -5,7 +5,9 @@ export const Works = () => {
   return (
     <div className="bg-black max-w-[80%] mx-auto p-5" id="works">
       <div className="pb-8">
-        <p className="text-4xl mb-6 font-bold primary-color">Proyectos</p>
+        <p className="text-4xl mb-6 font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600 inline-block">
+          Proyectos
+        </p>
         <p className="text-gray-400">Algunos de mis proyectos recientes</p>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
