@@ -22,7 +22,7 @@ export const Works = () => {
             <img
               src={image}
               layout="fill"
-              className="object-cover"
+              className="object-cover brightness-50"
               alt={title}
             />
             <div className="bg-transparent absolute inset-0 flex flex-col justify-center items-center transform transition-transform duration-300 hover:scale-110">
