@@ -34,12 +34,12 @@ export const Works = () => {
               </span>
               <div className="pt-4 text-center">
                 <a href={github} target="_blank">
-                  <button className="text-center border rounded m-2 py-2 px-3 text-gray-600 cursor-pointer hover:text-white hover:bg-gradient-to-r hover:from-orange-400 hover:to-pink-600 transition duration-400">
+                  <button className="text-center border rounded m-2 py-2 px-3 text-white cursor-pointer hover:bg-gradient-to-r hover:from-orange-400 hover:to-pink-600 transition duration-400">
                     <TbBrandGithubFilled />
                   </button>
                 </a>
                 <a href={link} target="_blank">
-                  <button className="text-center border rounded m-2 py-2 px-3 text-gray-600 cursor-pointer hover:text-white hover:bg-gradient-to-r hover:from-orange-400 hover:to-pink-600 transition duration-400">
+                  <button className="text-center border rounded m-2 py-2 px-3 text-white cursor-pointer hover:bg-gradient-to-r hover:from-orange-400 hover:to-pink-600 transition duration-400">
                     <MdOutlineWebAsset />
                   </button>
                 </a>

@@ -4,9 +4,16 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
+  plugins: [react(), tailwindcss()],
   base: "/anthony-alarcon-castaneda/",
   build: {
-    outDir: "docs", // 👈 genera en docs en vez de dist
+    outDir: "docs",
+    assetsDir: "assets",
+    cssCodeSplit: false,
+    rollupOptions: {
+      output: {
+        assetFileNames: "assets/[name].[ext]",
+      },
+    },
   },
-  plugins: [react(), tailwindcss()],
 });
