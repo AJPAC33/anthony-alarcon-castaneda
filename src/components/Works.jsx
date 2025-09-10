@@ -22,24 +22,24 @@ export const Works = () => {
             <img
               src={image}
               layout="fill"
-              className="object-cover brightness-50"
+              className="object-cover"
               alt={title}
             />
             <div className="bg-transparent absolute inset-0 flex flex-col justify-center items-center transform transition-transform duration-300 hover:scale-110">
-              <span className="text-2xl font-bold text-white tracking-wider">
+              <span className="text-2xl font-bold text-gray-800 tracking-wider">
                 {title}
               </span>
-              <span className="text-[12px] font-bold text-gray-400 py-4 px-28 text-center tracking-wider">
+              <span className="text-[12px] font-bold text-gray-600py-4 px-28 text-center tracking-wider">
                 {description}
               </span>
               <div className="pt-4 text-center">
                 <a href={github} target="_blank">
-                  <button className="text-center border rounded m-2 py-2 px-3 text-white cursor-pointer hover:bg-gradient-to-r hover:from-orange-400 hover:to-pink-600 transition duration-400">
+                  <button className="text-center border rounded m-2 py-2 px-3 text-gray-600 cursor-pointer hover:text-white hover:bg-gradient-to-r hover:from-orange-400 hover:to-pink-600 transition duration-400">
                     <TbBrandGithubFilled />
                   </button>
                 </a>
                 <a href={link} target="_blank">
-                  <button className="text-center border rounded m-2 py-2 px-3 text-white cursor-pointer hover:bg-gradient-to-r hover:from-orange-400 hover:to-pink-600 transition duration-400">
+                  <button className="text-center border rounded m-2 py-2 px-3 text-gray-600 cursor-pointer hover:text-white hover:bg-gradient-to-r hover:from-orange-400 hover:to-pink-600 transition duration-400">
                     <MdOutlineWebAsset />
                   </button>
                 </a>
