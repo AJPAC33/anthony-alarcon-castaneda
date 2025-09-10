@@ -1,35 +1,37 @@
+// @ts-nocheck
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./docs/**/*.html", // Agrega esta línea
-  ],
-  safelist: [
-    // Todas las clases brightness que uses
-    "brightness-0",
-    "brightness-50",
-    "brightness-75",
-    "brightness-90",
-    "brightness-95",
-    "brightness-100",
-    "brightness-105",
-    "brightness-110",
-    "brightness-125",
-    "brightness-150",
-    "brightness-200",
+const plugin = require("tailwindcss/plugin");
 
-    // Si usas hover u otras variantes
-    "hover:brightness-75",
-    "hover:brightness-110",
-
-    // También incluye con prefijos responsive si los usas
-    "sm:brightness-75",
-    "md:brightness-110",
-    "lg:brightness-125",
-  ],
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const brightnessUtilities = {
+        ".brightness-0": {
+          "-webkit-filter": "brightness(0)",
+          filter: "brightness(0)",
+        },
+        ".brightness-50": {
+          "-webkit-filter": "brightness(0.5)",
+          filter: "brightness(0.5)",
+        },
+        ".brightness-75": {
+          "-webkit-filter": "brightness(0.75)",
+          filter: "brightness(0.75)",
+        },
+        ".brightness-110": {
+          "-webkit-filter": "brightness(1.1)",
+          filter: "brightness(1.1)",
+        },
+        ".brightness-125": {
+          "-webkit-filter": "brightness(1.25)",
+          filter: "brightness(1.25)",
+        },
+      };
+      addUtilities(brightnessUtilities);
+    }),
+  ],
 };
