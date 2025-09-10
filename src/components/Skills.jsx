@@ -29,7 +29,7 @@ export const Skills = () => {
             <p className="mt-2 text-center text-sm">{name}</p>
           </div>
         ))}
-        <div className="col-span-3 md:col-span-2 flex justify-center md:justify-between items-center gap-4">
+        <div className="col-span-3 md:col-span-2 flex justify-evenly md:justify-betweeen items-center gap-4">
           {skills.slice(3).map(({ name, image, shadow }) => (
             <div
               key={name}
