@@ -1,12 +1,7 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  safelist: [
-    "filter",
-    "brightness-[0.4]",
-    "brightness-[0.5]",
-    "brightness-[0.6]",
-  ],
+  safelist: ["filter", "brightness-[0.4]"],
   theme: {
     extend: {},
   },

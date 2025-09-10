@@ -22,7 +22,8 @@ export const Works = () => {
             <img
               src={image}
               layout="fill"
-              className="object-cover filter brightness-[0.4]"
+              className="object-cover"
+              style={{ filter: "brightness(0.4)" }}
               alt={title}
             />
             <div className="bg-transparent absolute inset-0 flex flex-col justify-center items-center transform transition-transform duration-300 hover:scale-110">
