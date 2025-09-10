@@ -26,10 +26,10 @@ export const Works = () => {
               alt={title}
             />
             <div className="bg-transparent absolute inset-0 flex flex-col justify-center items-center transform transition-transform duration-300 hover:scale-110">
-              <span className="text-2xl font-bold text-gray-800 tracking-wider">
+              <span className="text-2xl font-bold text-white tracking-wider">
                 {title}
               </span>
-              <span className="text-[12px] font-bold text-gray-600py-4 px-28 text-center tracking-wider">
+              <span className="text-[12px] font-bold text-white py-4 px-28 text-center tracking-wider">
                 {description}
               </span>
               <div className="pt-4 text-center">
