@@ -6,33 +6,43 @@ import {
   tailwindImage,
   javascriptImage,
 } from "../assets/index";
+import { skills } from "../utils/data";
 
 export const Skills = () => {
   return (
-    <div className="bg-black text-gray-400 md:h-[20%] max-w-[80%] mx-auto place-items-center md:justify-between">
-      <h2 className="text-gray-700 text-3xl md:text-4xl font-bold mb-8">
-        Mis habilidades
+    <div className="flex flex-col md:flex-row bg-black text-gray-400 w-[80%] my-16 md:my-24 mx-auto items-center md:justify-evenly">
+      <h2 className="text-gray-700 text-3xl md:text-4xl font-bold py-6 my-5 md:my-0">
+        Mis habilidades:
       </h2>
-      <div className="flex flex-row sm:gap-12 xl:gap-12">
-        <div className="flex flex-col items-center sm:w-[80px] max-w-[120px] col-span-1 m-2 sm:my-0 drop-shadow-[0_0_22px_rgba(69,252,240,0.75)]">
-          <img src={tailwindImage} alt="tailwind image" />
-          <p className="mt-2">Tailwind</p>
-        </div>
-        <div className="flex flex-col items-center sm:w-[80px] max-w-[120px] col-span-1 m-2 sm:my-0 drop-shadow-[0_0_22px_rgba(246,133,38,0.75)]">
-          <img src={htmlImage} alt="html image" />
-          <p className="mt-2">HTML</p>
-        </div>
-        <div className="flex flex-col items-center sm:w-[80px] max-w-[120px] col-span-1 m-2 sm:my-0 drop-shadow-[0_0_22px_rgba(6,111,169,0.75)]">
-          <img src={cssImage} alt="css image" />
-          <p className="mt-2">CSS</p>
-        </div>
-        <div className="flex flex-col items-center sm:w-[80px] max-w-[120px] col-span-1 m-2 sm:my-0 drop-shadow-[0_0_22px_rgba(255,250,5,0.75)]">
-          <img src={javascriptImage} alt="javascript image" />
-          <p className="mt-2">Javascript</p>
-        </div>
-        <div className="flex flex-col items-center sm:w-[80px] max-w-[120px] col-span-1 m-2 sm:my-0 drop-shadow-[0_0_22px_rgba(74,217,255,0.75)]">
-          <img src={reactImage} alt="react image" />
-          <p className="mt-2">React</p>
+
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-8 md:gap-14">
+        {skills.slice(0, 3).map(({ name, image, shadow }) => (
+          <div
+            key={name}
+            className={`flex flex-col items-center justify-center w-[50px] md:w-[90px] m-2 sm:my-0 ${shadow}`}
+          >
+            <img
+              src={image}
+              alt={`Icono ${name}`}
+              className="h-auto w-full object-contain"
+            />
+            <p className="mt-2 text-center text-sm">{name}</p>
+          </div>
+        ))}
+        <div className="col-span-3 md:col-span-2 flex justify-center md:justify-between items-center gap-4">
+          {skills.slice(3).map(({ name, image, shadow }) => (
+            <div
+              key={name}
+              className={`flex flex-col items-center justify-center w-[40px] md:w-[70px] m-2 sm:my-0 ${shadow}`}
+            >
+              <img
+                src={image}
+                alt={`Icono ${name}`}
+                className="h-auto w-full object-contain"
+              />
+              <p className="mt-2 text-center text-sm">{name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

@@ -9,13 +9,13 @@ export const Hero = () => {
       id="home"
     >
       <div
-        className="md:col-span-1 my-auto mx-auto sm:w-[250px] h-auto lg:w-[450px] m-[50px] bg-cover bg-no-repeat bg-center"
+        className="md:col-span-1 my-auto mx-auto w-[250px] h-auto md:w-[420px] m-[50px] bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <img
           src={photoImage}
           alt="hero image"
-          className="brightness-80"
+          className="brightness-75"
           style={{
             maskImage: `url(${backgroundImage})`,
             maskSize: "cover",
@@ -26,7 +26,7 @@ export const Hero = () => {
       </div>
       <div className="flex md:col-span-3 px-5 my-auto justify-center">
         <div className="flex flex-col text-left">
-          <h1 className="text-white text-2xl sm:text-2xl md:text-4xl lg:text-7xl font-extrabold">
+          <h1 className="text-white text-xl md:text-6xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600 inline-block text-4xl py-4">
               Soy
             </span>
@@ -45,19 +45,19 @@ export const Hero = () => {
             aplicaciones web.
           </p>
 
-          <div className="my-8">
+          <div className="flex flex-col md:flex-row gap-4 justify-start">
             <a
               href={`${import.meta.env.BASE_URL}CV.pdf`}
               download="Anthony-Alarcón-CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 w-full rounded-xl mr-4 bg-gradient-to-br from-orange-500 to-pink-500 text-white"
+              className="px-6 py-3 w-auto rounded-xl bg-gradient-to-br from-orange-500 to-pink-500 text-white text-center"
             >
               Descargar CV
             </a>
             <a
               href="#contact"
-              className="px-6 py-3 w-full rounded-xl mr-4 border border-gray-400 hover:bg-gradient-to-br from-orange-500 to-pink-500 text-white hover:border-none"
+              className="px-6 py-3 w-auto rounded-xl border border-gray-400 hover:bg-gradient-to-br from-orange-500 to-pink-500 text-white text-center hover:border-none"
             >
               Contacto
             </a>
