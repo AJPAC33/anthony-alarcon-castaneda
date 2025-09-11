@@ -4,7 +4,6 @@ import { MdOutlineWebAsset } from "react-icons/md";
 import { projects } from "../utils/data";
 
 export const Works = () => {
-  console.log(projects);
   return (
     <div className="bg-black max-w-[80%] mx-auto p-5" id="works">
       <div className="pb-8">
