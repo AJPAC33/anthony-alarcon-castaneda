@@ -27,7 +27,7 @@ export const Hero = () => {
       <div className="flex md:col-span-3 px-5 my-auto justify-center">
         <div className="flex flex-col text-left">
           <h1 className="text-white text-xl md:text-6xl font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600 inline-block text-4xl py-4">
+            <span className="text-transparent text-2xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600 inline-block md:text-4xl py-4">
               Soy
             </span>
             <br />

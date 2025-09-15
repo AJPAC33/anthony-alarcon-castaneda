@@ -1,11 +1,4 @@
 import React from "react";
-import {
-  htmlImage,
-  cssImage,
-  reactImage,
-  tailwindImage,
-  javascriptImage,
-} from "../assets/index";
 import { skills } from "../utils/data";
 
 export const Skills = () => {
@@ -14,26 +7,12 @@ export const Skills = () => {
       <h2 className="text-gray-700 text-3xl md:text-4xl font-bold py-6 my-5 md:my-0">
         Mis habilidades:
       </h2>
-
-      <div className="grid grid-cols-3 md:grid-cols-5 gap-8 md:gap-14">
-        {skills.slice(0, 3).map(({ name, image, shadow }) => (
-          <div
-            key={name}
-            className={`flex flex-col items-center justify-center w-[50px] md:w-[90px] m-2 sm:my-0 ${shadow}`}
-          >
-            <img
-              src={image}
-              alt={`Icono ${name}`}
-              className="h-auto w-full object-contain"
-            />
-            <p className="mt-2 text-center text-sm">{name}</p>
-          </div>
-        ))}
-        <div className="col-span-3 md:col-span-2 flex justify-evenly md:justify-betweeen items-center gap-4">
-          {skills.slice(3).map(({ name, image, shadow }) => (
+      {skills.length % 6 === 0 ? (
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-8 md:gap-12">
+          {skills.map(({ name, image, shadow }) => (
             <div
               key={name}
-              className={`flex flex-col items-center justify-center w-[40px] md:w-[70px] m-2 sm:my-0 ${shadow}`}
+              className={`flex flex-col items-center justify-center w-[50px] md:w-[90px] m-2 sm:my-0 ${shadow}`}
             >
               <img
                 src={image}
@@ -44,7 +23,38 @@ export const Skills = () => {
             </div>
           ))}
         </div>
-      </div>
+      ) : (
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-8 md:gap-12">
+          {skills.slice(0, 3).map(({ name, image, shadow }) => (
+            <div
+              key={name}
+              className={`flex flex-col items-center justify-center w-[50px] md:w-[90px] m-2 sm:my-0 ${shadow}`}
+            >
+              <img
+                src={image}
+                alt={`Icono ${name}`}
+                className="h-auto w-full object-contain"
+              />
+              <p className="mt-2 text-center text-sm">{name}</p>
+            </div>
+          ))}
+          <div className="col-span-3 md:col-span-2 flex justify-evenly md:justify-between items-center gap-4">
+            {skills.slice(3).map(({ name, image, shadow }) => (
+              <div
+                key={name}
+                className={`flex flex-col items-center justify-center w-[40px] md:w-[70px] m-2 sm:my-0 ${shadow}`}
+              >
+                <img
+                  src={image}
+                  alt={`Icono ${name}`}
+                  className="h-auto w-full object-contain"
+                />
+                <p className="mt-2 text-center text-sm">{name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

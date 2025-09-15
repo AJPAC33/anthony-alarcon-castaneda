@@ -3,6 +3,7 @@ import {
   htmlImage,
   javascriptImage,
   reactImage,
+  reduxImage,
   tailwindImage,
 } from "../assets";
 
@@ -46,6 +47,11 @@ export const projects = [
 ];
 
 export const skills = [
+  {
+    name: "Redux",
+    image: reduxImage,
+    shadow: "drop-shadow-[0_0_22px_rgba(89,61,136,0.75)]",
+  },
   {
     name: "Tailwind",
     image: tailwindImage,
