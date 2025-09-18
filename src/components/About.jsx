@@ -3,14 +3,14 @@ import { aboutMeImage } from "../assets";
 
 export const About = () => {
   return (
-    <div className="text-white max-w-[80%] mx-auto my-8 bg-black" id="about">
-      <div className="md:grid md:grid-cols-3">
-        <div className="mt-4 md:col-span-2 text-left flex md:mx-[60px]">
-          <div className="my-auto mx-6">
+    <div className="text-white max-w-[80%] mx-auto my-4 bg-black" id="about">
+      <div className="md:grid md:grid-cols-5">
+        <div className="mt-4 md:col-span-3 text-left flex md:mx-16">
+          <div className="w-fit my-auto mx-6">
             <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600 inline-block">
               Sobre Mi
             </h2>
-            <p className="text-base lg:text-lg">
+            <p className="text-base xl:text-xl">
               Hola, soy Anthony, desarrollador web apasionado por crear
               experiencias digitales intuitivas y funcionales. Trabajo
               principalmente con React, Next.js, Node.js y Tailwind CSS,
@@ -22,7 +22,7 @@ export const About = () => {
             </p>
           </div>
         </div>
-        <div className="md:col-span-1 my-15 mx-auto w-[250px] md:w-[350px] h-auto lg:w-[380px] m-[50px]">
+        <div className="md:col-span-2 my-15 mx-auto w-[240px] md:w-[320px] xl:w-[480px] h-auto xl:p-10 m-[50px]">
           <img src={aboutMeImage} alt="hero image" />
         </div>
       </div>

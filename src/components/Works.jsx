@@ -12,7 +12,7 @@ export const Works = () => {
         </p>
         <p className="text-gray-400">Algunos de mis proyectos recientes</p>
       </div>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
         {projects.map(({ title, description, image, link, github }, index) => (
           <div
             className="overflow-hidden shadow-lg shadow-[#363738] group container rounded-lg flex justify-center items-center h-[320px] bg-cover relative"

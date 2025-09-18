@@ -5,11 +5,11 @@ import { backgroundImage, photoImage } from "../assets";
 export const Hero = () => {
   return (
     <div
-      className="grid sm:grid-cols-1 md:grid-cols-4 h-auto mt-25 mb-15 gap-8 max-w-[80%] mx-auto bg-black justify-center"
+      className="grid grid-cols-1 md:grid-cols-5 h-auto mb-18 mt-25 xl:mb-25 gap-8 max-w-[80%] mx-auto bg-black justify-center"
       id="home"
     >
       <div
-        className="md:col-span-1 my-auto mx-auto w-[250px] h-auto md:w-[420px] m-[50px] bg-cover bg-no-repeat bg-center"
+        className="col-span-1 md:col-span-2 my-auto mx-auto h-auto w-fit m-[50px] bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <img
@@ -24,10 +24,10 @@ export const Hero = () => {
           }}
         />
       </div>
-      <div className="flex md:col-span-3 px-5 my-auto justify-center">
+      <div className="flex md:col-span-3 w-fit px-5 my-auto justify-center">
         <div className="flex flex-col text-left">
-          <h1 className="text-white text-xl md:text-6xl font-extrabold">
-            <span className="text-transparent text-2xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600 inline-block md:text-4xl py-4">
+          <h1 className="text-white text-xl md:text-4xl xl:text-6xl font-extrabold">
+            <span className="text-transparent text-2xl md:text-4xl xl:text-6xl bg-clip-text bg-gradient-to-r from-orange-400 to-pink-600 inline-block py-4">
               Soy
             </span>
             <br />
@@ -40,7 +40,7 @@ export const Hero = () => {
             />
           </h1>
 
-          <p className="w-fit text-white sm:text-lg my-6 lg:text-xl">
+          <p className="w-fit text-white text-lg my-6 xl:text-xl">
             Mi nombre es Anthony Alarcón y busco experiencia en desarrollo de
             aplicaciones web.
           </p>
