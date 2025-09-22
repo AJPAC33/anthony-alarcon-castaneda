@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 export const Skills = () => {
   return (
-    <div className="relative flex flex-col bg-black text-gray-400 w-[80%] mb-20 md:mb-12 md:w-[65%] xl:mt-40 xl:mb-4 mx-auto items-center xl:justify-evenly">
+    <div className="flex flex-col bg-black text-gray-400 w-[80%] mb-12 md:w-[65%] xl:mt-40 xl:mb-4 mx-auto items-center">
       <h2 className="text-gray-700 text-3xl md:text-4xl xl:text-5xl font-bold py-4 md:mb-2 xl:mb-4">
         Mis habilidades:
       </h2>
@@ -56,23 +56,25 @@ export const Skills = () => {
           </div>
         </div>
       )} */}
-      <Marquee speed={40} pauseOnHover={true} gradient={false}>
-        {skills.map(({ name, image, shadow }) => (
-          <div
-            key={name}
-            className="flex flex-col items-center mx-3 md:mx-6 md:my-6 xl:mx-10 xl:my-10 py-8"
-          >
-            <img
-              src={image}
-              alt={name}
-              className={`w-[50px] md:w-[90px] xl:w-[120px] m-2 sm:my-0 ${shadow} h-auto object-contain`}
-            />
-            <p className="text-xs mt-1">{name}</p>
-          </div>
-        ))}
-      </Marquee>
-      <div className="absolute top-0 left-0 w-36 h-full bg-gradient-to-r from-black to-transparent pointer-events-none z-10"></div>
-      <div className="absolute top-0 right-0 w-36 h-full bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div>
+      <div className="relative flex w-full items-center xl:justify-evenly">
+        <Marquee speed={40} pauseOnHover={true} gradient={false}>
+          {skills.map(({ name, image, shadow }) => (
+            <div
+              key={name}
+              className="flex flex-col items-center mx-3 md:mx-6 md:my-6 xl:mx-10 xl:my-10 py-8"
+            >
+              <img
+                src={image}
+                alt={name}
+                className={`w-[50px] md:w-[90px] xl:w-[120px] m-2 sm:my-0 ${shadow} h-auto object-contain`}
+              />
+              <p className="text-xs mt-1">{name}</p>
+            </div>
+          ))}
+        </Marquee>
+        <div className="absolute top-0 left-0 w-20 md:w-36 h-full bg-gradient-to-r from-black to-transparent pointer-events-none z-10"></div>
+        <div className="absolute top-0 right-0 w-20 md:w-36 h-full bg-gradient-to-l from-black to-transparent pointer-events-none z-10"></div>
+      </div>
     </div>
   );
 };
