@@ -14,7 +14,7 @@ export const Navbar = () => {
       </h1>
       <ul className="hidden w-[600px] md:flex justify-center gap-15">
         <li className="p-5">
-          <a href="#about">Acerca de</a>
+          <a href="#about">Sobre mi</a>
         </li>
         <li className="p-5">
           <a href="#works">Trabajo</a>
@@ -38,16 +38,24 @@ export const Navbar = () => {
         </h1>
         <ul className="p-8 text-2xl">
           <li className="p-2">
-            <a href="#home">Inicio</a>
+            <a href="#home" onClick={handleNav}>
+              Inicio
+            </a>
           </li>
           <li className="p-2">
-            <a href="#about">Acerca de</a>
+            <a href="#about" onClick={handleNav}>
+              Sobre mi
+            </a>
           </li>
           <li className="p-2">
-            <a href="#works">Trabajo</a>
+            <a href="#works" onClick={handleNav}>
+              Trabajo
+            </a>
           </li>
           <li className="p-2">
-            <a href="#contact">Contacto</a>
+            <a href="#contact" onClick={handleNav}>
+              Contacto
+            </a>
           </li>
         </ul>
       </div>
