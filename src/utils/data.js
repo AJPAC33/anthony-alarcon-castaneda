@@ -10,7 +10,7 @@ import {
 export const projects = [
   {
     title: "Ecommerce App",
-    description: "Aplicación de compras con carrito y pasarela de pago",
+    description: "Aplicación de compras con carrito",
     github: "https://github.com/AJPAC33/ecommerce-app",
     link: "https://ajpac33-ecommerce-app.netlify.app",
     image: `${import.meta.env.BASE_URL}projectImages/ecommerce-app.png`,
